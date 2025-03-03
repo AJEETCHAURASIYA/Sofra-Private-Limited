@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>SofraPrivateLtd</title>
+    <style>
+      .logo {
+          max-width: 50px;
+      }
+   </style>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-white fixed w-full shadow-md p-4" x-data="{ open: false }">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="spl.jpg" alt="Sofra Logo" class="logo">
+                <span class="text-xl font-semibold">Sofra Private Limited</span>
+            </div>
+            <!-- Navbar Links for Desktop -->
+            <div class="hidden md:flex space-x-6 ">
+                <a href="index.html" class="text-black hover:text-blue-600">Home</a>
+                <a href="#about" class="text-black hover:text-blue-600">About</a>
+                <a href="#services" class="text-black hover:text-blue-600">Services</a>
+                <a href="career.html" class="text-black hover:text-blue-600">Career</a>
+                <a href="#contact" class="text-black hover:text-blue-600">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button @click="open = !open" class="text-gray-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div x-show="open" class="md:hidden mt-2">
+            <a href="#home" @click="open = false" class="block px-4 py-2 text-gray-600 hover:text-blue-600">Home</a>
+            <a href="#about" @click="open = false" class="block px-4 py-2 text-gray-600 hover:text-blue-600">About</a>
+            <a href="#services" @click="open = false" class="block px-4 py-2 text-gray-600 hover:text-blue-600">Services</a>
+            <a href="career.html" @click="open = false" class="block px-4 py-2 text-gray-600 hover:text-blue-600">Career</a>
+            <a href="#contact" @click="open = false" class="block px-4 py-2 text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+    </nav>
+    
+
+    <section class="bg-blue-600 text-white py-24  text-center">
+        <div class="container mx-auto pt-10 px-6">
+            <h1 class="text-5xl font-bold">Welcome to Sofra Private Limited</h1>
+            <p class="mt-4 text-lg">Innovative IT Solutions for Your Business Growth</p>
+            <p class="mt-4 text-lg">"Driving digital excellence with innovation and expertise.
+                Shaping the future of technology"</p>
+            <a href="#services" class="mt-6 inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">Explore Services</a>
+        </div>
+    </section>
+  
+    <section class="container mx-auto pt-8 px-6 text-center">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Exciting News!</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto ">Exciting news for students and tech enthusiasts: SPL is launching a series of courses and certifications soon! Whether you're looking to sharpen your skills or dive into the world of IT, there's something for everyone.</p>
+        <p class="text-gray-600 max-w-3xl mx-auto mt-4 ">Get ready to learn from industry professionals and gain valuable knowledge that can kickstart your career.</p>
+        <p class="text-gray-600 max-w-3xl mx-auto mt-4 ">Stay tuned for updates on course offerings, and don't miss out on the chance to enhance your skills with SPL. Join the journey towards excellence in IT with Sofra Private Limited.</p>
+        <!-- <p class="text-gray-800 font-semibold mt-4 "></p> -->
+    </section>
+    
+    <section id="about" class="container mx-auto pt-24  px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">"Your Vision, Our Code!"</h2>
+        <section style="#" class="text-gray-600 body-font">
+            <!-- <h2 class="text-3xl font-bold mb-8">About Us</h2> -->
+            <div  class="container mx-auto flex px-5  md:flex-row flex-col items-center">
+              <div  class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-blue-600">Sofra Private Ltd</h1>
+                  <!-- <br class="hidden lg:inline-block">readymade gluten -->
+                <p class="mb-8 leading-relaxed justify-between text-justify">Sofra Private Limited started by Mr. Ajeet Chaurasiya in 2024, SPL is the go-to IT company for top-notch services!. Our team of experts is dedicated to transforming businesses with scalable, secure, and efficient digital solutions tailored to your unique needs.  we believe in innovation, reliability, and excellence, ensuring that our clients stay ahead in the ever-evolving tech landscape. Whether you’re a startup or an enterprise, we are here to empower your digital journey with smart, future-ready solutions. Let’s build the future together!.</p>
+                
+              </div>
+              <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img style="border-radius: 10px;" class="object-cover object-center rounded " alt="hero" src="ai.jpg">
+                
+              </div>
+            </div>
+            <div>
+              <section  class="container mx-auto pt-10 px-6 text-center">
+                <!-- <h2 class="text-2xl font-semibold text-gray-800 mb-4">Exciting News!</h2> -->
+                <!-- <p class="text-gray-600 max-w-3x2 mx-auto ">Exciting news for students and tech enthusiasts: SPL is launching a series of courses and certifications soon! Whether you're looking to sharpen your skills or dive into the world of IT, there's something for everyone.</p> -->
+                <!-- <p class="text-gray-600 max-w-3x2 mx-auto mt-4 ">Get ready to learn from industry professionals and gain valuable knowledge that can kickstart your career.</p> -->
+                <!-- <p class="text-gray-600 max-w-3x2 mx-auto mt-4 ">Stay tuned for updates on course offerings, and don't miss out on the chance to enhance your skills with SPL. Join the journey towards excellence in IT with Sofra Private Limited.</p> -->
+                <p class="text-gray-800 font-semibold mt-4">The future is bright, and it starts here!</p>
+            </section>
+            </div>
+          </section>
+        <!-- <h2 class="text-2xl font-semibold text-gray-800 mb-4">Who We Are</h2> -->
+    </section>
+    
+   
+
+    <!-- Services Section -->
+    <section id="services" class="pt-24 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+            <div  class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white shadow-lg rounded-2xl hover:shadow-xl transition duration-300">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-12 h-12 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 3a1 1 0 000 2h12a1 1 0 100-2H4zm-1 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm1 4a1 1 0 100 2h12a1 1 0 100-2H4zm-1 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">App Development</h3>
+                    <p class="text-gray-600">We build high-quality mobile applications for Android and iOS platforms with cutting-edge technologies.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-2xl hover:shadow-xl transition duration-300">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-12 h-12 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13 7H7v6h6V7z" /><path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm10 12H5V5h10v10z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600">Creating responsive, fast, and modern websites tailored to your business needs.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-2xl hover:shadow-xl transition duration-300">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-12 h-12 text-orange-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v10h10V5H5z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Courses</h3>
+                    <p class="text-gray-600">Learn the latest technologies from industry experts through our structured courses.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-2xl hover:shadow-xl transition duration-300">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-12 h-12 text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3h12a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">IT Consulting</h3>
+                    <p class="text-gray-600">Providing expert IT solutions to optimize your business operations.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-2xl hover:shadow-xl transition duration-300">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-12 h-12 text-teal-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Technology Training</h3>
+                    <p class="text-gray-600">Upskill your workforce with cutting-edge technology training programs.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-2xl hover:shadow-xl transition duration-300">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-12 h-12 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 110 16 8 8 0 010-16z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Artificial Intelligence</h3>
+                    <p class="text-gray-600">Innovative AI solutions to enhance automation and decision-making.</p>
+                </div>
+            </div>
+            <!-- <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white shadow-lg rounded-2xl hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">App Development</h3>
+                    <p class="text-gray-600">We build high-quality mobile applications for Android and iOS platforms.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-2xl hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600">Creating responsive, fast, and modern websites tailored to your needs.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-2xl hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">IT Consulting</h3>
+                    <p class="text-gray-600">Helping businesses navigate complex IT challenges with expert advice.</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    
+
+
+      
+    <section id="contact" class="pt-24 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="bg-white p-6 shadow-lg rounded-lg text-left">
+                    <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                    <form action="https://formspree.io/f/mgegwzlq" method="post">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                            <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                            <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                            <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+                <!-- Map Location -->
+                <div class="bg-white p-6 shadow-lg rounded-lg flex items-center">
+                    <!-- <h3 class="text-xl font-semibold mb-4">Our Location</h3> -->
+                    <iframe 
+                        class="w-full h-full rounded-lg"
+                        style="min-height: 400px;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.071442178821!2d80.94615987519753!3d26.846693576742465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd04a897f23d%3A0xfcb64d22a4ec9c86!2sLucknow%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1647993033450!5m2!1sen!2sus" 
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+      
+    <section id="team" class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-10">
+            <!-- <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">OUR TEAM</h1> -->
+            <h2 class="text-3xl font-bold text-black">"The Minds Behind the Code!"</h2>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base ">Our developer team is the backbone of innovation, turning ideas into powerful digital solutions. With a passion for coding and a commitment to excellence.</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 lg:w-1/2">
+              <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="ajeet.JPG">
+                <div class="flex-grow sm:pl-8">
+                  <h2 class="title-font font-medium text-lg text-gray-900">Mr. Ajeet Chaurasiya</h2>
+                  <h3 class="text-gray-500 mb-3">Founder and Designer</h3>
+                  <p class="mb-4"> He started SPL in 2024 and he work as Leader, Designer and Project Manager.</p>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 lg:w-1/2">
+              <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="abhi1.jpg">
+                <div class="flex-grow sm:pl-8">
+                  <h2 class="title-font font-medium text-lg text-gray-900">Mr. Abhishek Patel</h2>
+                  <h3 class="text-gray-500 mb-3">CEO and Developer</h3>
+                  <p class="mb-4">He also work together with founder in Development of Sofra Private Ltd.</p>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="p-4 lg:w-1/2">
+              <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/204x204">
+                <div class="flex-grow sm:pl-8">
+                  <h2 class="title-font font-medium text-lg text-gray-900">Atticus Finch</h2>
+                  <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                  <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="p-4 lg:w-1/2">
+              <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206">
+                <div class="flex-grow sm:pl-8">
+                  <h2 class="title-font font-medium text-lg text-gray-900">Henry Letham</h2>
+                  <h3 class="text-gray-500 mb-3">Designer</h3>
+                  <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+     
+      <section class="container mx-auto py-12 px-6 text-center">
+        <div class="grid md:grid-cols-4 gap-8">
+            <!-- Statistic 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-4xl font-bold text-blue-600">67+</h2>
+                <p class="text-gray-600">Projects Completed</p>
+            </div>
+            
+            <!-- Statistic 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-4xl font-bold text-blue-600">1K+</h2>
+                <p class="text-gray-600">Happy Clients</p>
+            </div>
+            
+            <!-- Statistic 3 -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-4xl font-bold text-blue-600">1+</h2>
+                <p class="text-gray-600">Years of Experience</p>
+            </div>
+            
+            <!-- Statistic 4 -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-4xl font-bold text-blue-600">50+</h2>
+                <p class="text-gray-600">Team Members</p>
+            </div>
+        </div>
+    </section>
+      
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <footer class="bg-blue-800 text-white py-6 mt-10">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Sofra Private Limited</h3>
+                    <p>Innovating technology solutions for a better tomorrow.</p>
+                    <p>Sofra Private Ltd is a dynamic IT solutions provider committed to delivering innovative and scalable technology services.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li><a href="#about" class="hover:underline">About Us</a></li>
+                        <li><a href="#services" class="hover:underline">Services</a></li>
+                        <li><a href="career.html" class="hover:underline">Career</a></li>
+                        <li><a href="#contact" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Contact Us</h3>
+                    <p>Email: sofraprivateltd@gmail.com</p>
+                    <p>Phone: +91 7510066628</p>
+                    <p>Address: Lucknow, Uttar Pradesh, India 226028</p>
+                </div>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="mt-6 flex justify-center space-x-6">
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.675 0h-21.35C.596 0 0 .597 0 1.326v21.348C0 23.404.596 24 1.325 24h11.497V14.706h-3.13v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.657-4.788 1.324 0 2.463.099 2.795.143v3.24l-1.918.001c-1.503 0-1.794.713-1.794 1.762v2.309h3.587l-.467 3.622h-3.12V24h6.116C23.404 24 24 23.404 24 22.675V1.326C24 .597 23.404 0 22.675 0z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.954 4.569c-.885.392-1.833.656-2.828.775 1.017-.611 1.798-1.574 2.165-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.561-3.591-1.561-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.733-.666 1.584-.666 2.488 0 1.72.87 3.238 2.188 4.127-.807-.026-1.566-.247-2.229-.616v.062c0 2.4 1.707 4.402 3.977 4.856-.416.111-.855.171-1.305.171-.319 0-.633-.031-.937-.089.631 1.974 2.445 3.415 4.6 3.456-1.685 1.32-3.81 2.107-6.102 2.107-.396 0-.79-.023-1.175-.067 2.177 1.397 4.765 2.214 7.548 2.214 9.055 0 14-7.498 14-13.986 0-.209 0-.42-.015-.63.961-.695 1.8-1.562 2.462-2.549z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.23 0H1.77C.792 0 0 .792 0 1.77v20.46C0 23.208.792 24 1.77 24h20.46c.978 0 1.77-.792 1.77-1.77V1.77C24 .792 23.208 0 22.23 0zM7.08 20.452H3.56V9h3.52v11.452zM5.32 7.67a2.03 2.03 0 110-4.06 2.03 2.03 0 010 4.06zM20.45 20.452h-3.52v-5.573c0-1.33-.027-3.042-1.854-3.042-1.854 0-2.138 1.45-2.138 2.945v5.67h-3.52V9h3.38v1.566h.048c.472-.894 1.627-1.854 3.352-1.854 3.584 0 4.244 2.36 4.244 5.433v6.307z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.23 0H1.77C.792 0 0 .792 0 1.77v20.46C0 23.208.792 24 1.77 24h20.46c.978 0 1.77-.792 1.77-1.77V1.77C24 .792 23.208 0 22.23 0zM7.08 20.452H3.56V9h3.52v11.452zM5.32 7.67a2.03 2.03 0 110-4.06 2.03 2.03 0 010 4.06zM20.45 20.452h-3.52v-5.573c0-1.33-.027-3.042-1.854-3.042-1.854 0-2.138 1.45-2.138 2.945v5.67h-3.52V9h3.38v1.566h.048c.472-.894 1.627-1.854 3.352-1.854 3.584 0 4.244 2.36 4.244 5.433v6.307z" />
+                    </svg>
+                </a>
+                
+            </div>
+            
+            <hr class="my-6 border-gray-400">
+            <p class="text-sm text-center">&copy; 2024 Sofra Private Limited. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
